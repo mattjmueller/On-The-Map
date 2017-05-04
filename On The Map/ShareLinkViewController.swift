@@ -10,7 +10,6 @@ import UIKit
 import MapKit
 
 class ShareLinkViewController: UIViewController, AccessesStudentLocations, UITextFieldDelegate, MKMapViewDelegate {
-	
 	//******************************************************
 	// MARK: - IB Outlets
 	//******************************************************
@@ -21,27 +20,21 @@ class ShareLinkViewController: UIViewController, AccessesStudentLocations, UITex
 	
 	
 	//******************************************************
-	// MARK: - Private Properties
+	// MARK: - Public Properties
 	//******************************************************
 	
 	weak var studentLocationService: StudentLocationService!
 	var locationToShare: Location!
 	
+	
 	//******************************************************
 	// MARK: - Life Cycle
 	//******************************************************
-	
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		configureViews()
 		mapLocation(locationToShare)
-	}
-	
-	override func viewWillAppear(_ animated: Bool) {
-//		print("\nReady to share?")
-//		print(studentLocationService.currentUser)
-//		print(studentLocationService.userHasLocation)
 	}
 	
 	func configureViews() {
@@ -72,11 +65,6 @@ class ShareLinkViewController: UIViewController, AccessesStudentLocations, UITex
 		mapView.addAnnotation(annotation)
 	}
 	
-	//******************************************************
-	// MARK: - Map View Delegate
-	//******************************************************
-	
-	
 	
 	//******************************************************
 	// MARK: - IB Actions
@@ -97,13 +85,12 @@ class ShareLinkViewController: UIViewController, AccessesStudentLocations, UITex
 				}
 			}
 		}
-		
-		
 	}
 	
 	@IBAction func cancel(_ sender: Any) {
 		dismiss(animated: true, completion: nil)
 	}
+	
 	
 	//***************************************************************************
 	// MARK: - TextField Delegate

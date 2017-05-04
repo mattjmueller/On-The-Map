@@ -20,7 +20,7 @@ class LoginViewController: UIViewController, ManagesLogin, AccessesStudentLocati
 	
 	
 	//******************************************************
-	// MARK: - Private Properties
+	// MARK: - Public Properties
 	//******************************************************
 
 	weak var udacityService: UdacityService!
@@ -86,7 +86,6 @@ class LoginViewController: UIViewController, ManagesLogin, AccessesStudentLocati
 			visibleBottom = loginBottom
 		}
 		
-		
 		// login bottom if it were centered, with a bit of margin kept
 		visibleBottom = visibleBottom - keyboardConstraint.constant + keyboardMargin
 		// how far is that from the top of the keyboard
@@ -119,7 +118,6 @@ class LoginViewController: UIViewController, ManagesLogin, AccessesStudentLocati
 			}
 		}
 	}
-	
 
 	
 	//***************************************************************************

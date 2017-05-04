@@ -9,7 +9,6 @@
 import UIKit
 
 class StudentListViewController: UIViewController, ManagesLogin, AccessesStudentLocations, UITableViewDelegate, UITableViewDataSource {
-
 	//******************************************************
 	// MARK: - IB Outlets
 	//******************************************************
@@ -18,11 +17,17 @@ class StudentListViewController: UIViewController, ManagesLogin, AccessesStudent
 	
 	
 	//******************************************************
-	// MARK: - Private Properties
+	// MARK: - Public Properties
 	//******************************************************
 	
 	weak var studentLocationService: StudentLocationService!
 	weak var udacityService: UdacityService!
+
+	
+	//******************************************************
+	// MARK: - Private Properties
+	//******************************************************
+	
 	var studentLocations = [StudentLocation]()
 	
 	
@@ -76,6 +81,7 @@ class StudentListViewController: UIViewController, ManagesLogin, AccessesStudent
 		cell.detailTextLabel?.text = locationItem.sharedURL?.absoluteString ?? ""
 		return cell
 	}
+	
 	
 	//******************************************************
 	// MARK: - Table View Delegate

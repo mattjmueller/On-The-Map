@@ -10,7 +10,6 @@ import UIKit
 import MapKit
 
 class AddLocationViewController: UIViewController, UsesGeolocation, UITextFieldDelegate {
-	
 	//******************************************************
 	// MARK: - IB Outlets
 	//******************************************************
@@ -20,16 +19,18 @@ class AddLocationViewController: UIViewController, UsesGeolocation, UITextFieldD
 	
 	
 	//******************************************************
-	// MARK: - Private Properties
+	// MARK: - Public Properties
 	//******************************************************
 	
 	weak var geolocationService: GeolocationService!
 
+	
 	//******************************************************
 	// MARK: - Private Properties
 	//******************************************************
 	
 	private var locationResult: Location!
+	
 	
 	//******************************************************
 	// MARK: - Life Cycle
@@ -112,6 +113,7 @@ class AddLocationViewController: UIViewController, UsesGeolocation, UITextFieldD
 	@IBAction func cancel(_ sender: Any) {
 		dismiss(animated: true, completion: nil)
 	}
+	
 	
 	//***************************************************************************
 	// MARK: - TextField Delegate

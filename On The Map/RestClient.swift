@@ -110,7 +110,6 @@ extension RestClient {
 			}
 		}
 		
-	
 		if let body = restRequest.jsonData {
 			do {
 				urlRequest.httpBody = try JSONSerialization.data(withJSONObject: body, options: [])

@@ -10,7 +10,6 @@ import UIKit
 import MapKit
 
 class StudentMapViewController: UIViewController, ManagesLogin, AccessesStudentLocations, MKMapViewDelegate {
-	
 	//******************************************************
 	// MARK: - IB Outlets
 	//******************************************************
@@ -19,17 +18,17 @@ class StudentMapViewController: UIViewController, ManagesLogin, AccessesStudentL
 
 	
 	//******************************************************
-	// MARK: - Private Properties
+	// MARK: - Public Properties
 	//******************************************************
 	
 	weak var udacityService: UdacityService!
 	weak var studentLocationService: StudentLocationService!
 	var studentLocations = [StudentLocation]()
 	
+	
 	//******************************************************
 	// MARK: - Life Cycle
 	//******************************************************
-	
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -67,7 +66,6 @@ class StudentMapViewController: UIViewController, ManagesLogin, AccessesStudentL
 			return annotation
 		})
 	}
-	
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if segue.identifier == "" && studentLocationService.userHasLocation {
